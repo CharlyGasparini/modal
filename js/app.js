@@ -4,11 +4,9 @@ const banner = document.querySelector(".banner");
 const modal = document.querySelector(".modal-overlay");
 
 openBtn.addEventListener("click", () => {
-    banner.classList.toggle("hide");
-    modal.classList.toggle("hide");
+    modal.classList.toggle("show");
 })
 
 closeBtn.addEventListener("click", () => {
-    banner.classList.toggle("hide");
-    modal.classList.toggle("hide");
+    modal.classList.toggle("show");
 })

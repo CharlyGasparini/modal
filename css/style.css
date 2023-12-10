@@ -24,10 +24,6 @@ a {
     text-decoration: none;
 }
 
-.hide {
-    visibility: hidden;
-}
-
 body {
     font-family: var(--ff-primary);
     text-align: center;
@@ -87,7 +83,8 @@ body {
         place-items: center;
         position: absolute;
         top: 0;
-        z-index: 10;
+        z-index: -10;
+        visibility: hidden;
         
         .modal-container {
             display: grid;
@@ -111,6 +108,11 @@ body {
                 }
             }
         }
+    }
+
+    .show {
+        visibility: visible;
+        z-index: 10;
     }
 }
 
