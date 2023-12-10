@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --ff-primary: 'Open Sans', sans-serif;
+    --color-primary: cornflowerblue;
+    --color-secondary: white;
+    --color-translucent: rgba(100, 148, 237, 0.5);
+    --color-translucent-2: rgba(220, 20, 60, 0.5);
+    --box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.7);
+    --transitions: all 0.3s linear normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    margin: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+body {
+    font-family: var(--ff-primary);
+    text-align: center;
+    
+    .bg {
+        background: var(--color-secondary);
+        border-radius: 1rem;
+        padding: 2rem;
+        min-width: 300px;
+        max-width: 600px;
+        box-shadow: var(--box-shadow);
+    }
+    
+    
+    .hero {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("/images/japan-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: grid;
+        place-items: center;
+        
+        .banner {
+            width: 50%;
+            display: grid;
+            place-items: center;
+            
+            .open-btn {
+                background: var(--color-primary);
+                border: var(--color-primary);
+                padding: 1rem;
+                border-radius: 1rem;
+                color: var(--color-secondary);
+                text-transform: uppercase;
+                box-shadow: var(--box-shadow);
+                width: 150px;
+                cursor: pointer;
+                transition: var(--transitions);
+
+                &:hover {
+                    background: var(--color-secondary);
+                    color: var(--color-primary);
+                    outline: 2px solid var(--color-primary);
+                }
+            }
+        }
+        
+    }
+    
+    .modal-overlay {
+        background: var(--color-translucent);
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        
+        .modal-container {
+            display: grid;
+            place-items: center;
+            position: relative;
+            
+            .close-btn {
+                background: transparent;
+                font-size: 2rem;
+                border: none;
+                color: crimson;
+                cursor: pointer;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                transition: var(--transitions);
+
+                &:hover {
+                    color: var(--color-translucent-2);
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
